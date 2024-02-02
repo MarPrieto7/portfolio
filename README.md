@@ -41,9 +41,9 @@ De acuerdo a las leyes:
 
 *. Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).
 
-*. Ley de Propiedad Intelectual (LPI): Esta ley protege los derechos de autor y la propiedad intelectual. Es relevante si compartes contenido original, como código fuente, diseño, texto o imágenes.
+*. Ley de Propiedad Intelectual (LPI).
 
-*. Reglamento General de Protección de Datos (RGPD): Aunque el RGPD es una regulación de la Unión Europea, es aplicable en España y establece normas específicas para la protección de datos personales.
+*. Reglamento General de Protección de Datos (RGPD).
 
 
 ## Desarrolladores:
