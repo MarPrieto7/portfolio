@@ -1,0 +1,35 @@
+[
+  {
+    "role": "Analista de Fraudes",
+    "organisation": "Wizink Bank",
+    "startDate": "Febrero, 2016",
+    "endDate": "Octubre,2020",
+    "experiences": ["Investigación y análisis de expedientes por fraudes.", 
+    "Especialista en Tarjeta Falsificada/Usurpación de identidad/ATO.", 
+    "Tramitación de Oficios Judiciales/ Policial.", 
+    "Preparación de informes de fraudes.", 
+    "Revisión y control de Retrocesos (Chargeback) y representaciones para Visa/ Mastercard."],
+    "imageSrc": "history/logowizink.png"
+  },
+  {
+    "role": "Analista de Control y Riesgo",
+    "organisation": "Citibank SA",
+    "startDate": "Octubre, 2006",
+    "endDate": "Febrero, 2016",
+    "experiences": ["Auditar cuentas de préstamos activadas, denegadas y refinanciaciones.", " Implementación del proyecto New To Bank.", 
+    "Estudio, valoración y análisis de operaciones crediticias (LOANS)", 
+    "Diseñar y actualizar manuales del procedimiento y aplicaciones de programas específicos para el desarrollado de la revisión de las cuentas/ prestamos"],
+    "imageSrc": "history/citilogo.png"
+  },
+  {
+    "role": "Técnico de formación",
+    "organisation": "IFES",
+    "startDate": "Diciembre, 2002",
+    "endDate": "Octubre, 2006",
+    "experiences": [
+      "Diseño y elaboración de acciones formativas para la ejecución de Contratos programas.",
+      "Elaboración de informes de evaluación de formación continua y ocupacional", 
+      "Revisión y modificación parcial de manuales de formación"],
+    "imageSrc": "history/logoIFES.png"
+  }
+]

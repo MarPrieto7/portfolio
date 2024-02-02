@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Project DOM",
+    "imageSrc": "projects/dom.png",
+    "description": "Este proyecto se hizo para afianzar Html, Css y aprender Javascript.",
+    "skills": ["Html", "Css", "Javascript"],
+    "demo": "https://proyecto-iii-dom.vercel.app/",
+    "source": "https://github.com/MarPrieto7/Proyecto-III_DOM"
+  },
+  {
+    "title": "Project Shopping-cart",
+    "imageSrc": "projects/cartecommerce.png",
+    "description": "En este proyecto se hizo para incluir un carrito de compras y consumir un API.",
+    "skills": ["Html", "Css", "Javascript"],
+    "demo": "https://happyphone-add-to-cart.vercel.app/",
+    "source": "https://github.com/MarPrieto7/Happyphone_Add-to-cart"
+  },
+  {
+    "title": "Project Ecommerce en React",
+    "imageSrc": "projects/remataplantas.png",
+    "description": "Este es un proyecto que se hizo para integrar React.",
+    "skills": ["React", "Javascript", "Node"],
+    "demo": "https://mataplantas.vercel.app/",
+    "source": "https://github.com/MarPrieto7/mataplantas"
+  }
+]
