@@ -12,6 +12,8 @@ export const Contact = () => {
     message: "",
   });
 
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -30,16 +32,21 @@ export const Contact = () => {
       phone: "",
       message: "",
     });
+    setIsFormSubmitted(true);
+    
+    setTimeout(() => {
+      setIsFormSubmitted(false);
+    }, 3000);
   };
-
   return (
     <footer id="contact" className={styles.container}>
       <div className={styles.text}>
-        <p>Si soy el perfil que estas buscando</p>
+        <p>Si soy el perfil que estás buscando</p>
         <h2>Contáctame!</h2>
       </div>
       <div className={styles.formContainer}>
         <form onSubmit={handleSubmit}>
+          {/* Campos del formulario */}
           <label>
             Nombre:
             <input
@@ -90,22 +97,39 @@ export const Contact = () => {
           </label>
           <button type="submit">Enviar</button>
         </form>
+        {isFormSubmitted && (
+          <p className={styles.successMessage}>
+            Formulario de contacto enviado con éxito!
+          </p>
+        )}
       </div>
       <ul className={styles.links}>
         <li className={styles.link}>
-          <img src={getImageUrl("contact/emailIcon.png")} alt="Email icon" />
-          <a href="mailto:mmarprietogarcia@gmail.com">mmarprietogarcia@gmail.com</a>
+          <img
+            src={getImageUrl("contact/emailIcon.png")}
+            alt="Email icon"
+          />
+          <a href="mailto:mmarprietogarcia@gmail.com">
+            mmarprietogarcia@gmail.com
+          </a>
         </li>
         <li className={styles.link}>
           <img
             src={getImageUrl("contact/linkedinIcon.png")}
             alt="LinkedIn icon"
           />
-          <a href="https://www.linkedin.com/in/mar-prieto-garcia">linkedin.com/in/mar-prieto-garcia</a>
+          <a href="https://www.linkedin.com/in/mar-prieto-garcia">
+            linkedin.com/in/mar-prieto-garcia
+          </a>
         </li>
         <li className={styles.link}>
-          <img src={getImageUrl("contact/githubIcon.png")} alt="Github icon" />
-          <a href="https://www.github.com/MarPrieto7">github.com/MarPrieto7</a>
+          <img
+            src={getImageUrl("contact/githubIcon.png")}
+            alt="Github icon"
+          />
+          <a href="https://www.github.com/MarPrieto7">
+            github.com/MarPrieto7
+          </a>
         </li>
       </ul>
     </footer>
