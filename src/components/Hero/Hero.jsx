@@ -1,4 +1,4 @@
-import React from "react";
+ailimport React from "react";
 
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
@@ -15,7 +15,7 @@ export const Hero = () => {
         En la actualidad estoy buscando un empleo en el que siga ampliando mi experiencia y que me permita sumir nuevas responsabilidades.
         </p>
         <a href="mailto:mmarprietogarcia@gmail.com" className={styles.contactBtn}>
-          Contacto
+          Email de contacto
         </a>
       </div>
       <img
