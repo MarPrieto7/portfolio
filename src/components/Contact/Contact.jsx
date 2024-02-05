@@ -1,4 +1,3 @@
-// En tu archivo Contact.jsx
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import { getImageUrl } from "../../utils";
@@ -11,8 +10,7 @@ export const Contact = () => {
     phone: "",
     message: "",
   });
-
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [successMessage, setSuccessMessage] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,106 +30,106 @@ export const Contact = () => {
       phone: "",
       message: "",
     });
-    setIsFormSubmitted(true);
-    
+    setSuccessMessage("Formulario de contacto enviado con éxito");
     setTimeout(() => {
-      setIsFormSubmitted(false);
+      setSuccessMessage(null);
     }, 3000);
   };
+
   return (
-    <footer id="contact" className={styles.container}>
+    <div>
       <div className={styles.text}>
-        <p>Si soy el perfil que estás buscando</p>
         <h2>Contáctame!</h2>
+        <p>Si soy el perfil que estás buscando</p>
+        <div className={styles.formContainer}>
+          <form onSubmit={handleSubmit}>
+            <label>
+              Nombre:
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Apellidos:
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Email:
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Teléfono:
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </label>
+            <label>
+              Mensaje:
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <button type="submit">Enviar</button>
+            {successMessage && (
+              <p className={styles.successMessage}>{successMessage}</p>
+            )}
+          </form>
+        </div>
       </div>
-      <div className={styles.formContainer}>
-        <form onSubmit={handleSubmit}>
-          {/* Campos del formulario */}
-          <label>
-            Nombre:
-            <input
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              required
+      <footer id="contact" className={styles.container}>
+        
+        <ul className={styles.links}>
+          <li className={styles.link}>
+            <img
+              src={getImageUrl("contact/emailIcon.png")}
+              alt="Email icon"
             />
-          </label>
-          <label>
-            Apellidos:
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              required
+            <a href="mailto:mmarprietogarcia@gmail.com">
+              mmarprietogarcia@gmail.com
+            </a>
+          </li>
+          <li className={styles.link}>
+            <img
+              src={getImageUrl("contact/linkedinIcon.png")}
+              alt="LinkedIn icon"
             />
-          </label>
-          <label>
-            Email:
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
+            <a href="https://www.linkedin.com/in/mar-prieto-garcia">
+              linkedin.com/in/mar-prieto-garcia
+            </a>
+          </li>
+          <li className={styles.link}>
+            <img
+              src={getImageUrl("contact/githubIcon.png")}
+              alt="Github icon"
             />
-          </label>
-          <label>
-            Teléfono:
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-          </label>
-          <label>
-            Mensaje:
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <button type="submit">Enviar</button>
-        </form>
-        {isFormSubmitted && (
-          <p className={styles.successMessage}>
-            Formulario de contacto enviado con éxito!
-          </p>
-        )}
-      </div>
-      <ul className={styles.links}>
-        <li className={styles.link}>
-          <img
-            src={getImageUrl("contact/emailIcon.png")}
-            alt="Email icon"
-          />
-          <a href="mailto:mmarprietogarcia@gmail.com">
-            mmarprietogarcia@gmail.com
-          </a>
-        </li>
-        <li className={styles.link}>
-          <img
-            src={getImageUrl("contact/linkedinIcon.png")}
-            alt="LinkedIn icon"
-          />
-          <a href="https://www.linkedin.com/in/mar-prieto-garcia">
-            linkedin.com/in/mar-prieto-garcia
-          </a>
-        </li>
-        <li className={styles.link}>
-          <img
-            src={getImageUrl("contact/githubIcon.png")}
-            alt="Github icon"
-          />
-          <a href="https://www.github.com/MarPrieto7">
-            github.com/MarPrieto7
-          </a>
-        </li>
-      </ul>
-    </footer>
+            <a href="https://www.github.com/MarPrieto7">
+              github.com/MarPrieto7
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
   );
 };
