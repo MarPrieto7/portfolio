@@ -10,6 +10,10 @@
   margin: 0 10%;
 }
 
+.menuBtn {
+  display: hidden;
+}
+
 .title {
   font-size: 30px;
   font-weight: 600;
@@ -31,6 +35,10 @@
   font-size: 25px;
   color: var(--color-text);
   text-decoration: none;
+}
+
+.menuBtn {
+  display: none;
 }
 
 @media screen and (max-width: 830px) {
